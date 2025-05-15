@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Início</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      .img-destaque {
+        display: block;
+        margin: 30px auto;
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include("partials/navbar") %>
+
+    <main>
+      <div class="container">
+        <h1>Bem-vindo a Loja de Carros</h1>
+        <img src="/images/estoque.png" alt="Destaque" class="img-destaque" />
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

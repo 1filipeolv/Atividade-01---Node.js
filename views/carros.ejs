@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Carros</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include("partials/navbar") %>
+
+    <main>
+      <div class="container">
+        <h1>Carros</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Imagem</th>
+              <th>Nome</th>
+              <th>Preço</th>
+              <th>Categoria</th>
+              <th>Ano</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% carros.forEach(carro => { %>
+            <tr>
+              <td><img src="/images/<%= carro.imagem %>" alt="<%= carro.nome %>"></td>
+              <td><%= carro.nome %></td>
+              <td><%= carro.preco.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) %></td>
+              <td><%= carro.categoria %></td>
+              <td><%= carro.ano %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

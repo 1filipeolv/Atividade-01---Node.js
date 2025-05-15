@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vendas</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <%- include("partials/navbar") %>
+
+    <main>
+      <div class="container">
+        <h1>Vendas</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Número do Pedido</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% vendas.forEach(venda => { %>
+            <tr>
+              <td><%= venda.numero %></td>
+              <td><%= venda.valor.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>
