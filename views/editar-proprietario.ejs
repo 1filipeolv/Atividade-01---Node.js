@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<%- include("partials/navbar") %>
+
+<h1>Editar Proprietário</h1>
+
+<form action="/Proprietarios/update/<%= proprietario.id %>" method="POST">
+  <input type="text" name="nome" value="<%= proprietario.nome %>" required>
+  <input type="text" name="cpf" value="<%= proprietario.cpf %>" required>
+  <input type="text" name="endereco" value="<%= proprietario.endereco %>" required>
+  <button type="submit">Atualizar</button>
+</form>
+
+<%- include("partials/footer") %>
